@@ -90,10 +90,18 @@ function calcularAuxilioTransporte(salarioEmpleado) {
   }
 }
 
+let contarEmpleados = 0;
+const totalEmpleados = 5;
+
+while (contarEmpleados < totalEmpleados){
+console.log(`\nProcesando empleado ${contarEmpleados + 1}`);
+
 let salarioEmpleado = calcularSalarioBruto()
 let deduccionesEmpleado = calcularDeducciones(salarioEmpleado)
 let auxilioTransporte = calcularAuxilioTransporte(salarioEmpleado)
 
 calcularSalarioNeto(salarioEmpleado, deduccionesEmpleado, auxilioTransporte)
+contarEmpleados++;
+}
 
-/*Argumentos y parametros */
+console.log("\nProceso de salarios completado para 5 empleados.");
